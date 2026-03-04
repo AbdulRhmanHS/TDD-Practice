@@ -25,4 +25,15 @@ export default [
     },
   },
   prettierConfig, // This must be LAST to override ESLint rules that might conflict with Prettier
+  {
+    overrides: [
+      {
+        files: ['tests/**/*'],
+        plugins: ['jest'],
+        env: {
+          'jest/globals': true,
+        },
+      },
+    ],
+  },
 ];
